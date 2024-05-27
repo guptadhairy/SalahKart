@@ -4,10 +4,10 @@ import SideBar from '../components/SideBar'
 const AnalyzeResume = () => {
   return (
     <div className="flex gap-6 h-[100vh]">
-      <div className="w-[20%] h-[100%] ">
+      <div className="w-[387px]  h-[100%] ">
         <SideBar />
       </div>
-      <div className="text-pink-500 w-[85%]">Analyze Your resume here</div>
+      <div className="text-pink-500 w-[85%] bg-slate-200">Analyze Your resume here</div>
     </div>
   )
 }

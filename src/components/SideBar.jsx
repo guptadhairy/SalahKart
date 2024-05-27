@@ -4,6 +4,7 @@ import { RiAiGenerate } from "react-icons/ri";
 import { TbFileAnalytics } from "react-icons/tb";
 import { MdCreditScore, MdOutlineFindInPage } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
+import sk from "../assets/sk.png"
 
 const SideBar = () => {
   const location = useLocation();
@@ -15,10 +16,12 @@ const SideBar = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between text-start px-10 py-4 shadow-xl h-full fixed">
+    <div className="flex flex-col h-full fixed">
       <div>
-        <h2 className="text-3xl ml-3 font-semibold">SalahKart</h2>
-        <hr className="h-px my-3 bg-gray-900 border-0 w-full"></hr>
+        <div className="mt-[69px] ml-[73px]">
+        <img src={sk} alt="SalahKart" width={"243px"} height={"51.98px"} />
+        </div>
+        <hr className="h-px my-3 mx-3 bg-gray-100 border-0 w-full"></hr>
         <div className="mt-6">
           <Link to="/" className={getLinkClassName("/")}>
             <GoHome style={{ height: "26px", width: "26px" }} />
