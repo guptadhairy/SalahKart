@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from '../components/SideBar'
 import TopBar from '../components/TopBar'
+import Frame1CheckScore from '../components/Frame1CheckScore'
 
 const CheckScore = () => {
   return (
@@ -9,7 +10,7 @@ const CheckScore = () => {
         <SideBar />
       </div>
       <div className="w-[85%] bg-slate-200 py-6 px-6">
-        <div className='text-sm text-gray-500 font-semibold'>Hello Dhairya,</div>
+        <div className='text-sm text-gray-500 font-semibold mt-5'>Hello Dhairya,</div>
         <div className='flex justify-between'>
         <div className='flex gap-2'>
           <div className='text-3xl font-semibold'>Welcome to </div>
@@ -18,6 +19,7 @@ const CheckScore = () => {
         </div>
         <TopBar />
         </div>
+        <Frame1CheckScore />
       </div>
     </div>
   )
