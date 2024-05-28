@@ -1,7 +1,6 @@
 
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Home from './pages/Home'
 import BuildResume from './pages/BuildResume'
 import AnalyzeResume from './pages/AnalyzeResume'
 import CheckScore from './pages/CheckScore'
@@ -9,13 +8,14 @@ import LinkedIn from './pages/LinkedIn'
 import UpdateProfile from './pages/UpdateProfile'
 import Settings from './pages/Settings'
 import Signout from './pages/Signout'
+import SignUp from './pages/SignUp'
 
 
 const App = () => {
   return (
    <Router>
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<SignUp />} />
       <Route path='/buildresume' element={<BuildResume />} />
       <Route path='/analyzeresume' element={<AnalyzeResume />} />
       <Route path='/checkscore' element={<CheckScore />} />
