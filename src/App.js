@@ -9,6 +9,7 @@ import UpdateProfile from './pages/UpdateProfile'
 import Settings from './pages/Settings'
 import Signout from './pages/Signout'
 import SignUp from './pages/SignUp'
+import Login from './pages/Login'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Route path='/updateprofile' element={<UpdateProfile />} />
       <Route path='/settings' element={<Settings />} />
       <Route path='/logout' element={<Signout />} />
+      <Route path='/login' element={<Login />} />
     </Routes>
    </Router>
   )
