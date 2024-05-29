@@ -10,15 +10,10 @@ import ExploreOtherFeatures from "../components/ExploreOtherFeatures";
 const CheckScore = () => {
   return (
     <div className="flex flex-col lg:flex-row h-screen">
-      {/* Sidebar */}
       <div className="w-full lg:w-1/4 bg-white rounded-[20px]">
         <SideBar />
       </div>
-
-      {/* Main Content */}
-      {/* Main Content */}
       <div className="flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto">
-        {/* Greeting and Top Bar */}
         <div className="mb-6 md:mb-8">
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,

@@ -3,9 +3,11 @@ import { AiOutlineFileDone } from "react-icons/ai";
 import { RiContactsBookFill } from "react-icons/ri";
 import { CiLinkedin, CiLogin } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+import { FaBloggerB } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineShowChart } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
+
 import sk from "../assets/sk.png";
 
 const SideBar = () => {
@@ -39,6 +41,10 @@ const SideBar = () => {
         <Link to="/linkedin" className={getLinkClassName("/linkedin")}>
           <CiLinkedin className="h-6 w-6" />
           <span className="text-lg lg:text-xl">Optimize LinkedIn</span>
+        </Link>
+        <Link to="/ourblogs" className={getLinkClassName("/ourblogs")}>
+          <FaBloggerB className="h-6 w-6" />
+          <span className="text-lg lg:text-xl">Our Blogs</span>
         </Link>
         <Link to="/updateprofile" className={getLinkClassName("/updateprofile")}>
           <CgProfile className="h-6 w-6" />

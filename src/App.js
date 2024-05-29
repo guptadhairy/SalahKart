@@ -10,6 +10,7 @@ import Settings from './pages/Settings'
 import Signout from './pages/Signout'
 import SignUp from './pages/SignUp'
 import Login from './pages/Login'
+import OurBlogs from './pages/OurBlogs'
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       <Route path='/settings' element={<Settings />} />
       <Route path='/logout' element={<Signout />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/ourblogs' element={<OurBlogs />} />
     </Routes>
    </Router>
   )
