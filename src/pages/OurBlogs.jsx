@@ -3,11 +3,11 @@ import SideBar from '../components/SideBar';
 import TopBar from '../components/TopBar';
 import Card from '../components/Card';
 import { Link } from 'react-router-dom';
+import rect from "../assets/comp.png";
+import sign from "../assets/sign.png"; 
 
-import rect from "../assets/comp.png"; // Update this with your actual image paths
-
-const allCards = [
-  { image: rect, title: "Blog 1", description: "Description for Blog 1", link: "/blog/1" },
+export const allCards = [
+  { image: rect, title: "Craft Your Perfect Pitch", description: "Building a Stellar LinkedIn Profile for Job Seeker", image2: sign , morre: "Thsi is sis the detailed description", link: "/blog/1" },
   { image: rect, title: "Blog 2", description: "Description for Blog 2", link: "/blog/2" },
   { image: rect, title: "Blog 3", description: "Description for Blog 3", link: "/blog/3" },
   { image: rect, title: "Blog 4", description: "Description for Blog 4", link: "/blog/4" },
@@ -67,7 +67,7 @@ const OurBlogs = () => {
             <TopBar />
           </div> 
         </div>
-        <div className='flex mt-[100px] justify-center items-center text-5xl font-medium text-blue-900  '>SalahKart Blogs</div>
+        <div className='flex mt-[100px] justify-center items-center text-5xl font-medium text-blue-900'>SalahKart Blogs</div>
         <div className='flex justify-center items-center mt-5 text-lg font-light text-slate-500'>Check out our blogs for the latest insights, tips and</div>
         <div className='flex justify-center items-center text-lg font-light text-slate-500'>trends in the industry!</div>
         <div className='w-full mt-10'>
@@ -87,7 +87,9 @@ const OurBlogs = () => {
           </div>
           <div className='flex flex-wrap justify-center mt-4'>
             {cards.map((card, index) => (
-              <Card key={index} image={card.image} title={card.title} description={card.description} link={card.link} />
+              <Link key={index} to={card.link}>
+                <Card image={card.image} title={card.title} description={card.description} />
+              </Link>
             ))}
           </div>
         </div>

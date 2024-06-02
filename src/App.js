@@ -11,6 +11,7 @@ import Signout from './pages/Signout'
 import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import OurBlogs from './pages/OurBlogs'
+import Blog1 from './pages/Blog1'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
       <Route path='/logout' element={<Signout />} />
       <Route path='/login' element={<Login />} />
       <Route path='/ourblogs' element={<OurBlogs />} />
+      <Route path='/blog/:id' element={<Blog1 />} />
     </Routes>
    </Router>
   )
