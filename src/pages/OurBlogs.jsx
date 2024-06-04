@@ -70,9 +70,25 @@ const OurBlogs = () => {
             <TopBar />
           </div> 
         </div>
-        <div className='flex mt-[100px] justify-center items-center text-5xl font-medium text-blue-900'>SalahKart Blogs</div>
-        <div className='flex justify-center items-center mt-5 text-lg font-light text-slate-500'>Check out our blogs for the latest insights, tips and</div>
-        <div className='flex justify-center items-center text-lg font-light text-slate-500'>trends in the industry!</div>
+        <div className="flex items-center mt-[100px] gap-[181px]">
+          <Link
+            to={"/createblogs"}
+            className="ml-10 text-blue-800 border-2 border-purple-700 p-2 rounded-3xl flex justify-center items-center gap-2 font-medium text-xl"
+          >
+             Create Blog
+          </Link>
+          <div className=" text-center  w-[400px]">
+            <div className="text-5xl font-medium text-blue-900 ">
+              SalahKart Blogs
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center items-center mt-5 text-lg font-light text-slate-500">
+          Check out our blogs for the latest insights, tips and
+        </div>
+        <div className="flex justify-center items-center text-lg font-light text-slate-500">
+          trends in the industry!
+        </div>
         <div className='w-full mt-10'>
           <div className='flex justify-center items-center gap-[90px] relative'>
             <div className='flex flex-col items-center'>
