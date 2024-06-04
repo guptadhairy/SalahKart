@@ -12,6 +12,8 @@ import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import OurBlogs from './pages/OurBlogs'
 import Blog1 from './pages/Blog1'
+import ResumeUpload from './pages/ResumeUpload'
+import CreateBlogs from './pages/CreatePage' 
 
 
 const App = () => {
@@ -29,6 +31,8 @@ const App = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/ourblogs' element={<OurBlogs />} />
       <Route path='/blog/:id' element={<Blog1 />} />
+      <Route path='/resumeupload' element={<ResumeUpload />} />
+      <Route path='/createblogs' element={<CreateBlogs />} />
     </Routes>
    </Router>
   )
