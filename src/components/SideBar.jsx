@@ -8,7 +8,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineShowChart } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
 
-import sk from "../assets/sk.png";
+import sk from "../assets/logo.svg";
 
 const SideBar = () => {
   const location = useLocation();
@@ -20,9 +20,9 @@ const SideBar = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-[25%] fixed">
+    <div className="flex flex-col h-screen w-[258] fixed">
       <div className="mt-12 px-4 lg:px-6">
-        <img src={sk} alt="SalahKart" className="w-full h-auto" />
+        <img src={sk} alt="SalahKart" className="w-1/2 h-auto text-center mx-[36px]" />
       </div>
       <hr className="h-px my-3 mx-4 lg:mx-6 bg-gray-200 border-0" />
       <div className="flex flex-col gap-4 px-4 lg:px-6 mt-6">

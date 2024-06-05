@@ -47,7 +47,7 @@ const OurBlogs = () => {
 
   return (
     <div className="flex flex-col lg:flex-row h-screen">
-      <div className="w-full lg:w-1/4 bg-white rounded-[20px]">
+      <div className="w-full lg:w-[258px] bg-white rounded-[20px]">
         <SideBar />
       </div>
       <div className="flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto">
