@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "../components/SideBar";
-import ResumeAnalysis1 from "../components/ResumeAnalysis1";
-import Navbar from "../components/NavBar";
 import TopBar from "../components/TopBar";
-import Gauge from "../components/Gauge";
 import AnalysisOptions from "../components/AnalysisOptions";
 import ImprovementList from "../components/ImprovementList";
 import ResumeDisplay from "../components/ResumeDisplay";
 import OverviewCard from "../components/OverviewCard";
 
 const AnalyzeResume = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="flex flex-col lg:flex-row h-screen">
-      <div className="w-full lg:w-[258px] bg-white rounded-[20px]">
-        <SideBar />
-      </div>
-      <div className="flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto">
+      <SideBar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+      <div
+        className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ${
+          isExpanded ? "ml-[350px]" : "ml-[100px]"
+        }`}
+      >
         <div className="mb-6 md:mb-8">
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,
@@ -32,24 +33,22 @@ const AnalyzeResume = () => {
                 - Job Finding Made Easy!
               </div>
             </div>
-            {/* <Navbar /> */}
             <TopBar />
           </div>
         </div>
 
-        {/* Check Score Frame */}
-
-        <div className="container flex  gap-2 flex-row">
-          <div className="w-[600px]">
-            {/* <Gauge /> */}
+        <div className="container flex flex-col lg:flex-row gap-5 mt-16">
+          <div className="flex-1 lg:w-[55%]">
             <OverviewCard score={85} />
-            <div className="w-[600px] flex flex-row gap-2 pt-2">
+            <div className="flex flex-col lg:flex-row gap-2 pt-2">
               <AnalysisOptions />
               <ImprovementList />
             </div>
           </div>
 
-          <ResumeDisplay />
+          <div className="flex w-[530px] h-[78vh]">
+            <ResumeDisplay />
+          </div>
         </div>
       </div>
     </div>

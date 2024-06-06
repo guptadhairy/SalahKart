@@ -34,7 +34,7 @@ const improvements = [
 ];
 
 const ImprovementCard = ({ title, points, description, link }) => (
-  <div className="bg-white shadow-md rounded-lg p-2 mb-2 flex justify-between items-start">
+  <div className="bg-white shadow-md rounded-lg p-2 mb-2 flex justify-between items-start min-h-[118px]">
     <div>
       <h3 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
         <i className="fas  text-indigo-600 mr-2">
@@ -54,7 +54,7 @@ const ImprovementCard = ({ title, points, description, link }) => (
 );
 
 const ImprovementList = () => (
-  <div className="w-full max-w-[421.33px]">
+  <div className="w-full max-w-[521.33px]">
     {improvements.map((item, index) => (
       <ImprovementCard
         key={index}

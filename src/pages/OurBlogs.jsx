@@ -37,6 +37,7 @@ const linkedInCards = [
 ];
 
 const OurBlogs = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const [cards, setCards] = useState(allCards);
   const [selectedLink, setSelectedLink] = useState('All');
 
@@ -47,10 +48,10 @@ const OurBlogs = () => {
 
   return (
     <div className="flex flex-col lg:flex-row h-screen">
-      <div className="w-full lg:w-[258px] bg-white rounded-[20px]">
-        <SideBar />
-      </div>
-      <div className="flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto">
+      <SideBar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+      <div className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ${
+          isExpanded ? "ml-[350px]" : "ml-[100px]"
+        }`}>
         <div className="mb-6 md:mb-8">
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,

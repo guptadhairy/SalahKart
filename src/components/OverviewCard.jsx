@@ -47,7 +47,7 @@ const OverviewCard = ({ score = 70 }) => {
           </span>
         </div>
       </div>
-      <div className="ml-6">
+      <div className="ml-14">
         <h3 className="text-lg font-semibold text-indigo-600">Overview</h3>
         <p className="text-sm text-gray-600">
           Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget.

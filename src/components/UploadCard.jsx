@@ -19,7 +19,7 @@ const ResumeUpload = () => {
   };
 
   return (
-    <div className=" pt-[6%] w-full flex flex wrap">
+    <div className=" pt-[6%] w-full flex flex-wrap justify-center">
       <div className="bg-white p-6 rounded-[25px] shadow-md w-[1000px] grid grid-cols-2 gap-4">
         <div className="">
           <h3 className="text-xl text-center font-bold mb-4">

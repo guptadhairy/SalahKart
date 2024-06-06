@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react'
 import SideBar from "./SideBar";
 import TopBar from "./TopBar";
 import { Link } from "react-router-dom";
@@ -8,14 +8,15 @@ import { allCards } from "../pages/OurBlogs";
 import star from "../assets/star.png"
 
 const DetailedBlog = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const { id } = useParams();
   const blog = allCards.find((card) => card.link === `/blog/${id}`);
   return (
     <div className="flex flex-col lg:flex-row h-screen">
-      <div className="w-full lg:w-1/4 bg-white rounded-[20px]">
-        <SideBar />
-      </div>
-      <div className="flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto">
+      <SideBar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+      <div className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ${
+          isExpanded ? "ml-[350px]" : "ml-[100px]"
+        }`}>
         <div className="mb-6 md:mb-8">
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,

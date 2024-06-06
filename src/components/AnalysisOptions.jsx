@@ -7,7 +7,7 @@ const AnalysisOptions = () => {
   const [active, setActive] = useState('Resume Upload Based');
 
   return (
-    <div className="h-[435.77px] w-[192px] min-w-[190px] bg-white shadow-lg rounded-lg p-4">
+    <div className="max-h-[495px] w-[212px] min-w-[190px] bg-white shadow-lg rounded-lg p-4">
       <div className="mb-6">
         <h2 className="text-sm font-semibold text-pp mb-2">
           Criteria Based Analysis
@@ -49,7 +49,7 @@ const AnalysisOptions = () => {
           </button>
         </div>
       </div>
-      <div className='pt-[50px]'>
+      <div className='pt-[100px]'>
         <h2 className="text-sm font-semibold text-pp mb-2">
           Tools to improve score
         </h2>

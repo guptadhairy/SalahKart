@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { RiContactsBookFill } from "react-icons/ri";
 import { CiLinkedin, CiLogin } from "react-icons/ci";
@@ -21,11 +21,7 @@ const SideBar = ({ isExpanded, setIsExpanded }) => {
   };
 
   return (
-    <div
-      className={`flex flex-col h-screen ${
-        isExpanded ? "w-[350px] bg-white" : "w-[100px] bg-white"
-      } fixed transition-all duration-300`}
-    >
+    <div className={`flex flex-col h-screen ${isExpanded ? "w-[300px]" : "w-[100px]"} fixed`}>
       <div className="mt-12 px-4 lg:px-6">
         {isExpanded && (
           <img src={sk} alt="SalahKart" className="w-1/2 h-auto text-center mx-[36px]" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import Frame1CheckScore from "../components/Frame1CheckScore";
@@ -8,13 +8,17 @@ import ImprovementAnalysis from "../components/ImprovementAnalysis";
 import ExploreOtherFeatures from "../components/ExploreOtherFeatures";
 
 const CheckScore = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className="flex flex-col lg:flex-row h-screen">
-      <div className="w-full lg:w-[258px] bg-white rounded-[20px]">
-        <SideBar />
-      </div>
-      <div className="flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto">
-        <div className="mb-6 md:mb-8">
+      <SideBar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
+      <div
+        className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ${
+          isExpanded ? "ml-[350px]" : "ml-[100px]"
+        }`}
+      >
+        <div className={`mb-6 md:mb-8 transition-all duration-300 ${isExpanded ? "ml-0" : "ml-4"}`}>
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,
           </div>
@@ -36,15 +40,14 @@ const CheckScore = () => {
 
         {/* Check Score Frame */}
         <Frame1CheckScore />
-        <div className="container mt-1 flex gap-3 ">
+        <div className={`container mt-1 flex gap-3 transition-all duration-300 ${isExpanded ? "ml-0" : "ml-4"}`}>
           <ResumeAnalysis />
           <ImprovementAnalysis />
         </div>
-        <div className="container mt-1 flex gap-3 py-4">
-        <ResumeScoreCheckHistory />
-        <ExploreOtherFeatures />
+        <div className={`container mt-1 flex gap-3 py-4 transition-all duration-300 ${isExpanded ? "ml-0" : "ml-4"}`}>
+          <ResumeScoreCheckHistory />
+          <ExploreOtherFeatures />
         </div>  
-        
       </div>
     </div>
   );
