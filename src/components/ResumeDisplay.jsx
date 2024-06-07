@@ -3,7 +3,7 @@ import i from '../assets/i.png';
 
 const ResumeDisplay = () => (
 
-    <div className="w-[530px] h-[78vh]">
+    <div className="w-full h-[100vh]">
         <img src={i} alt="i" className="w-full h-full" />   
 
         </div>

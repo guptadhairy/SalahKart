@@ -1,46 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
+import GaugeChart from "react-gauge-chart";
 
-// Function to calculate the stroke dash array based on the score
-const calculateStrokeDasharray = (score) => {
-  const circumference = 2 * Math.PI * 15.9155;
-  const offset = circumference - (score / 100) * circumference;
-  return `${circumference - offset}, ${offset}`;
-};
 
 const OverviewCard = ({ score = 70 }) => {
   return (
     <div className="flex bg-white shadow-md rounded-lg p-6 items-center">
-      <div className="flex-shrink-0 relative">
-        <svg
-          className="w-24 h-24 transform -rotate-90"
-          viewBox="0 0 36 36"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            className="circle-bg"
-            d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831
-              a 15.9155 15.9155 0 0 1 0 -31.831"
-            fill="none"
-            stroke="#e6e6e6"
-            strokeWidth="2"
-          />
-          <path
-            className="circle"
-            d="M18 2.0845
-              a 15.9155 15.9155 0 0 1 0 31.831"
-            fill="none"
-            stroke="url(#gradient)"
-            strokeWidth="2"
-            strokeDasharray={calculateStrokeDasharray(score)}
-          />
-          <defs>
-            <linearGradient id="gradient" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#f00" />
-              <stop offset="100%" stopColor="#0f0" />
-            </linearGradient>
-          </defs>
-        </svg>
+      <div className="relative flex-shrink-1 w-[200px]">
+        <GaugeChart
+          
+          id="gauge-chart5"
+          nrOfLevels={100}
+          arcsLength={[0.3, 0.5, 0.2]}
+          colors={["#EA4228", "#F5CD19", "#5BE12C"]}
+          percent={score / 100}
+          arcPadding={0.02}
+        />
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-xl font-semibold text-gray-800">
             {score}/100
@@ -58,6 +33,14 @@ const OverviewCard = ({ score = 70 }) => {
       </div>
     </div>
   );
+};
+
+OverviewCard.propTypes = {
+  score: PropTypes.number,
+};
+
+OverviewCard.defaultProps = {
+  score: 70,
 };
 
 export default OverviewCard;

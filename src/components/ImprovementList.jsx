@@ -1,67 +1,245 @@
-import React from "react";
+import React, { useState } from "react";
 import { ImStatsBars } from "react-icons/im";
-
 
 const improvements = [
   {
-    title: "Tone & Style",
-    points: "+5 points scope of improvement",
+    title: "Language & Grammar",
+    points: "75/100",
+    scope: "+5 points scope of improvement",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
-    link: "#",
+    details: [
+      {
+        title: "Verb & Tenses",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Active Voice",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Buzzwords",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+      {
+        title: "Grammar Check",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Spell Check",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Use of Personal Pronouns",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+    ],
   },
   {
-    title: "Impact",
-    points: "+5 points scope of improvement",
+    title: "Language & Grammar",
+    points: "75/100",
+    scope: "+5 points scope of improvement",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
-    link: "#",
+    details: [
+      {
+        title: "Verb & Tenses",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Active Voice",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Buzzwords",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+      {
+        title: "Grammar Check",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Spell Check",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Use of Personal Pronouns",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+    ],
   },
   {
-    title: "Formatting",
-    points: "+5 points scope of improvement",
+    title: "Language & Grammar",
+    points: "75/100",
+    scope: "+5 points scope of improvement",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
-    link: "#",
+    details: [
+      {
+        title: "Verb & Tenses",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Active Voice",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Buzzwords",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+      {
+        title: "Grammar Check",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Spell Check",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Use of Personal Pronouns",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+    ],
   },
   {
-    title: "Keyword Optimization",
-    points: "+5 points scope of improvement",
+    title: "Language & Grammar",
+    points: "75/100",
+    scope: "+5 points scope of improvement",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
-    link: "#",
-  },
+    details: [
+      {
+        title: "Verb & Tenses",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Active Voice",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Buzzwords",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+      {
+        title: "Grammar Check",
+        status: "Excellent",
+        description: "Appropriately Used",
+      },
+      {
+        title: "Spell Check",
+        status: "Unsatisfactory",
+        description: "Needs Improvement",
+      },
+      {
+        title: "Use of Personal Pronouns",
+        status: "Moderate",
+        description: "Moderately Needs Improvement",
+      },
+    ],
+  }
 ];
 
-const ImprovementCard = ({ title, points, description, link }) => (
-  <div className="bg-white shadow-md rounded-lg p-2 mb-2 flex justify-between items-start min-h-[118px]">
-    <div>
-      <h3 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
-        <i className="fas  text-indigo-600 mr-2">
-          <ImStatsBars />
-        </i>{" "}
-        {title}
-      </h3>
-      <p className="text-xs text-gray-600">{description}</p>
+const ImprovementCard = ({ title, points, scope, description, details }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const getStatusColor = (status) => {
+    switch (status) {
+      case "Excellent":
+        return "text-green-500";
+      case "Moderate":
+        return "text-orange-500";
+      case "Unsatisfactory":
+        return "text-red-500";
+      default:
+        return "text-gray-500";
+    }
+  };
+
+  return (
+    <div className="bg-white shadow-md rounded-lg p-4 mb-2 scroll-m-0 w-full">
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
+            <i className="fas text-indigo-600 mr-2">
+              <ImStatsBars />
+            </i>
+            {title}
+          </h3>
+          <p className="text-xs text-green-500 font-bold mb-1">{scope}</p>
+          <p className="text-xs text-gray-600">{description}</p>
+        </div>
+        <div className="text-right">
+          <div className="text-sm font-semibold text-yellow-500 mb-1">
+            {points}
+          </div>
+          <button
+            onClick={toggleDropdown}
+            className="text-indigo-600 text-sm font-semibold"
+          >
+            {isOpen ? "View less ←" : "View Details →"}
+          </button>
+        </div>
+      </div>
+      {isOpen && (
+        <div className="mt-2 p-2 border-t border-gray-200">
+          {details.map((detail, index) => (
+            <div key={index} className="mb-1">
+              <div className="flex justify-between">
+                <span className="text-sm font-semibold text-gray-800">
+                  {detail.title}
+                </span>
+                <span
+                  className={`text-sm font-semibold ${getStatusColor(
+                    detail.status
+                  )}`}
+                >
+                  {detail.status}
+                </span>
+              </div>
+              <div className="text-xs text-gray-600">{detail.description}</div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-    <div className="text-right">
-      <p className="text-xs text-green-600 mb-2">{points}</p>
-      <a href={link} className="text-indigo-600 text-sm font-semibold">
-        View Details &rarr;
-      </a>
-    </div>
-  </div>
-);
+  );
+};
 
 const ImprovementList = () => (
-  <div className="w-full max-w-[521.33px]">
+  <div className="w-full">
     {improvements.map((item, index) => (
       <ImprovementCard
         key={index}
         title={item.title}
         points={item.points}
+        scope={item.scope}
         description={item.description}
-        link={item.link}
+        details={item.details}
       />
     ))}
   </div>

@@ -39,14 +39,14 @@ const AnalyzeResume = () => {
 
         <div className="container flex flex-col lg:flex-row gap-5 mt-16">
           <div className="flex-1 lg:w-[55%]">
-            <OverviewCard score={85} />
+            <OverviewCard score={70} />
             <div className="flex flex-col lg:flex-row gap-2 pt-2">
               <AnalysisOptions />
               <ImprovementList />
             </div>
           </div>
 
-          <div className="flex w-[530px] h-[78vh]">
+          <div className="flex w-[43vw] h-[100vh]">
             <ResumeDisplay />
           </div>
         </div>

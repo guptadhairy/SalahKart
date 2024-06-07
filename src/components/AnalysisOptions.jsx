@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChartBar } from "@fortawesome/free-solid-svg-icons";
+import { CgProfile } from "react-icons/cg";
+import { GrDocument } from "react-icons/gr";
+import { FaEdit } from "react-icons/fa";
+import { MdOutlineEdit } from "react-icons/md";
+import { PiTextIndent } from "react-icons/pi";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
 
 const AnalysisOptions = () => {
   const [active, setActive] = useState('Resume Upload Based');
 
   return (
-    <div className="max-h-[495px] w-[212px] min-w-[190px] bg-white shadow-lg rounded-lg p-4">
+    <div className="max-h-[495px] w-[212px] min-w-[190px] bg-white shadow-lg rounded-lg p-2">
       <div className="mb-6">
-        <h2 className="text-sm font-semibold text-pp mb-2">
+        <h2 className="text-sm font-bold text-pp mb-2">
           Criteria Based Analysis
         </h2>
         <div className="w-full h-px bg-gray-200 mb-4"></div>
@@ -22,7 +26,9 @@ const AnalysisOptions = () => {
                 : "text-gray-600 hover:bg-gray-100"
             }`}
           >
-            <i className="fas fa-upload mr-2"></i>
+            <i className="inline-block mx-1 text-lg">
+              <GrDocument />
+            </i>
             Resume Upload Based
           </button>
           <button
@@ -33,7 +39,9 @@ const AnalysisOptions = () => {
                 : "text-gray-600 hover:bg-gray-100"
             }`}
           >
-            <i className="fas fa-user-tag mr-2"></i>
+            <i className="inline-block mx-1 text-lg">
+              <CgProfile />
+            </i>
             Select a Role Based
           </button>
           <button
@@ -44,27 +52,35 @@ const AnalysisOptions = () => {
                 : "text-gray-600 hover:bg-gray-100"
             }`}
           >
-            <i className="fas fa-file-alt mr-2"></i>
+            <i className="inline-block mx-1 text-lg">
+              <FaEdit />
+            </i>
             Job Description Based
           </button>
         </div>
       </div>
-      <div className='pt-[100px]'>
-        <h2 className="text-sm font-semibold text-pp mb-2">
+      <div className="pt-[100px]">
+        <h2 className="text-sm font-bold text-pp mb-2">
           Tools to improve score
         </h2>
         <div className="w-full h-px bg-gray-200 mb-4"></div>
         <div className="flex flex-col space-y-1">
           <button className="text-left text-xs p-2 text-gray-600 rounded-lg hover:bg-gray-100">
-            <i className="fas fa-chart-line mr-2"></i>
+            <i className="inline-block mx-1 text-lg">
+              <IoDocumentTextSharp />
+            </i>
             Line Analysis
           </button>
           <button className="text-left p-2 text-xs text-gray-600 rounded-lg hover:bg-gray-100">
-            <i className="fas fa-magic mr-2"></i>
+            <i className="inline-block mx-1 text-lg">
+              <MdOutlineEdit />
+            </i>
             Salah Magic Writer
           </button>
           <button className="text-left p-2 text-xs text-gray-600 rounded-lg hover:bg-gray-100">
-            <i className="fas fa-align-left mr-2"></i>
+            <i className="inline-block mx-1 text-lg">
+              <PiTextIndent />
+            </i>
             AI Content Formatter
           </button>
         </div>
