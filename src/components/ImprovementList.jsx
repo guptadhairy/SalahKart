@@ -158,6 +158,7 @@ const improvements = [
       },
     ],
   }
+  // Repeat the above object for other items...
 ];
 
 const ImprovementCard = ({ title, points, scope, description, details }) => {
@@ -181,7 +182,7 @@ const ImprovementCard = ({ title, points, scope, description, details }) => {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mb-2 scroll-m-0 w-full">
+    <div className="bg-white shadow-md rounded-lg p-4 mb-2 w-full">
       <div className="flex justify-between items-start">
         <div>
           <h3 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
@@ -231,7 +232,7 @@ const ImprovementCard = ({ title, points, scope, description, details }) => {
 };
 
 const ImprovementList = () => (
-  <div className="w-full">
+  <div className="w-full h-[500px] overflow-y-auto custom-scrollbar">
     {improvements.map((item, index) => (
       <ImprovementCard
         key={index}

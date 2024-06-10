@@ -38,7 +38,7 @@ const AnalyzeResume = () => {
         </div>
 
         <div className="container flex flex-col lg:flex-row gap-5 mt-16">
-          <div className="flex-1 lg:w-[55%]">
+          <div className="flex-1 h-[88vh] lg:w-[60%]">
             <OverviewCard score={70} />
             <div className="flex flex-col lg:flex-row gap-2 pt-2">
               <AnalysisOptions />
@@ -46,7 +46,7 @@ const AnalyzeResume = () => {
             </div>
           </div>
 
-          <div className="flex w-[43vw] h-[100vh]">
+          <div className="flex w-[35vw] h-[100vh]">
             <ResumeDisplay />
           </div>
         </div>
