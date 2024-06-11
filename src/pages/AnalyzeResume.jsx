@@ -10,10 +10,10 @@ const AnalyzeResume = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen">
+    <div className="flex flex-col lg:flex-row " >
       <SideBar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
       <div
-        className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ${
+        className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-hidden transition-all duration-300 ${
           isExpanded ? "ml-[350px]" : "ml-[100px]"
         }`}
       >
@@ -37,8 +37,8 @@ const AnalyzeResume = () => {
           </div>
         </div>
 
-        <div className="container flex flex-col lg:flex-row gap-5 mt-16">
-          <div className="flex-1 h-[88vh] lg:w-[60%]">
+        <div className="container flex flex-col lg:flex-row gap-5 mt-16 ">
+          <div className="flex-1 lg:w-[60%]">
             <OverviewCard score={70} />
             <div className="flex flex-col lg:flex-row gap-2 pt-2">
               <AnalysisOptions />
@@ -46,7 +46,7 @@ const AnalyzeResume = () => {
             </div>
           </div>
 
-          <div className="flex w-[35vw] h-[100vh]">
+          <div className="flex w-[35vw]  ">
             <ResumeDisplay />
           </div>
         </div>

@@ -6,7 +6,7 @@ import GaugeChart from "react-gauge-chart";
 const OverviewCard = ({ score = 70 }) => {
   return (
     <div className="flex bg-white shadow-md rounded-lg p-6 items-center">
-      <div className="relative flex-shrink-1 w-[200px]">
+      <div className="relative flex-shrink-1 w-[200px] ">
         <GaugeChart
           
           id="gauge-chart5"
@@ -24,11 +24,10 @@ const OverviewCard = ({ score = 70 }) => {
       </div>
       <div className="ml-14">
         <h3 className="text-lg font-semibold text-indigo-600">Overview</h3>
-        <p className="text-sm text-gray-600">
+        <p className="text-xs text-gray-600">
           Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget.
           Maecenas ac ipsum laoreet amet ultrices. Lorem ipsum dolor sit amet
-          consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet
-          amet ultrices.
+         
         </p>
       </div>
     </div>

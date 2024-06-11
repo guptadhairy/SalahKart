@@ -1,36 +1,49 @@
 import React from "react";
-import { FaClipboardList, FaLinkedin } from "react-icons/fa";
-import { HiOutlineDocumentText } from "react-icons/hi";
+import { AiOutlineFileSearch } from "react-icons/ai";
+import { MdOutlineBuild } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
-const ExploreOtherFeatures = () => {
+const Features = () => {
   return (
-    <div className="bg-white rounded-[25px] shadow-md p-6">
+    <div className="bg-white p-6 rounded-[25px] shadow-md">
       <h2 className="text-lg font-semibold mb-4">Explore Our Other Features</h2>
       <div className="space-y-4">
-        <div className="flex items-center space-x-2">
-          <FaClipboardList className="text-blue-500 text-2xl" />
-          <h3 className="text-base font-semibold">Resume Analysis</h3>
-          <p className="text-gray-600">
-            Get a Detailed Analysis of your Resume.
-          </p>
+        <div className="flex items-center space-x-4">
+          <div className="flex-shrink-0 bg-blue-100 text-blue-600 p-2 rounded-full">
+            <AiOutlineFileSearch className="w-6 h-6" />
+          </div>
+          <div>
+            <h3 className="font-medium">Resume Analysis</h3>
+            <p className="text-gray-500 text-sm">
+              Get a Detailed Analysis of your Resume
+            </p>
+          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <HiOutlineDocumentText className="text-blue-500 text-2xl" />
-          <h3 className="text-base font-semibold">Build Your Resume</h3>
-          <p className="text-gray-600">
-            Get Your Resume Built by Our Platform.
-          </p>
+        <div className="flex items-center space-x-4">
+          <div className="flex-shrink-0 bg-green-100 text-green-600 p-2 rounded-full">
+            <MdOutlineBuild className="w-6 h-6" />
+          </div>
+          <div>
+            <h3 className="font-medium">Build Your Resume</h3>
+            <p className="text-gray-500 text-sm">
+              Get Your Resume Built by Our Platform
+            </p>
+          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <FaLinkedin className="text-blue-500 text-2xl" />
-          <h3 className="text-base font-semibold">Optimize LinkedIn</h3>
-          <p className="text-gray-600">
-            Get Your LinkedIn Optimized for Job Search.
-          </p>
+        <div className="flex items-center space-x-4">
+          <div className="flex-shrink-0 bg-blue-500 text-white p-2 rounded-full">
+            <FaLinkedin className="w-6 h-6" />
+          </div>
+          <div>
+            <h3 className="font-medium">Optimize LinkedIn</h3>
+            <p className="text-gray-500 text-sm">
+              Get Your LinkedIn Optimized for Job Search
+            </p>
+          </div>
         </div>
       </div>
-      <div className="text-right mt-4">
-        <a href="#" className="text-blue-500 hover:underline">
+      <div className="mt-4 text-right">
+        <a href="#" className="text-blue-600 hover:underline">
           View all →
         </a>
       </div>
@@ -38,4 +51,4 @@ const ExploreOtherFeatures = () => {
   );
 };
 
-export default ExploreOtherFeatures;
+export default Features;

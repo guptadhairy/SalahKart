@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
 import Frame1CheckScore from "../components/Frame1CheckScore";
-import ResumeAnalysis from "../components/ResumeAnalysis";
+import ResumeScoreCard from "../components/ResumeScoreCard";  
 import ResumeScoreCheckHistory from "../components/ResumeScoreCheckHistory"; 
 import ImprovementAnalysis from "../components/ImprovementAnalysis"; 
-import ExploreOtherFeatures from "../components/ExploreOtherFeatures";
-
+import Features from "../components/ExploreOtherFeatures";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import TipsBanner from "../components/TipsBanner";  
 const CheckScore = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -18,7 +19,11 @@ const CheckScore = () => {
           isExpanded ? "ml-[350px]" : "ml-[100px]"
         }`}
       >
-        <div className={`mb-6 md:mb-8 transition-all duration-300 ${isExpanded ? "ml-0" : "ml-4"}`}>
+        <div
+          className={`mb-6 md:mb-8 transition-all duration-300 ${
+            isExpanded ? "ml-0" : "ml-4"
+          }`}
+        >
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,
           </div>
@@ -40,14 +45,19 @@ const CheckScore = () => {
 
         {/* Check Score Frame */}
         <Frame1CheckScore />
-        <div className={`container mt-1 flex gap-3 transition-all duration-300 ${isExpanded ? "ml-0" : "ml-4"}`}>
-          <ResumeAnalysis />
+        <div className=" h-[350px] flex mx-3 m-3 gap-3  ">
+          <ResumeScoreCard />
           <ImprovementAnalysis />
         </div>
-        <div className={`container mt-1 flex gap-3 py-4 transition-all duration-300 ${isExpanded ? "ml-0" : "ml-4"}`}>
+        <div
+          className={`container h-[380px] mt-1 flex gap-3 py-4 transition-all duration-300 ${
+            isExpanded ? "ml-0" : "ml-4"
+          }`}
+        >
           <ResumeScoreCheckHistory />
-          <ExploreOtherFeatures />
-        </div>  
+          <Features />
+          <TipsBanner />
+        </div>
       </div>
     </div>
   );

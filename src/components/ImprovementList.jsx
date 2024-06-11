@@ -207,7 +207,7 @@ const ImprovementCard = ({ title, points, scope, description, details }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="mt-2 p-2 border-t border-gray-200">
+        <div className="mt-2 p-2 border-t border-gray-200 shadow-lg bg-lp">
           {details.map((detail, index) => (
             <div key={index} className="mb-1">
               <div className="flex justify-between">
@@ -232,7 +232,7 @@ const ImprovementCard = ({ title, points, scope, description, details }) => {
 };
 
 const ImprovementList = () => (
-  <div className="w-full h-[500px] overflow-y-auto custom-scrollbar">
+  <div className="w-full max-h-[490px] overflow-y-auto custom-scrollbar">
     {improvements.map((item, index) => (
       <ImprovementCard
         key={index}
