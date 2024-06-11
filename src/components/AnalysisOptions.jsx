@@ -21,7 +21,7 @@ const AnalysisOptions = () => {
   return (
     <div className="max-h-[490px] w-[212px] min-w-[190px] bg-white shadow-lg rounded-lg p-2">
       <div className="mb-6">
-        <h2 className="text-sm font-bold text-pp mb-2">
+        <h2 className="text-sm font-bold text-dp mb-2">
           Criteria Based Analysis
         </h2>
         <div className="w-full h-px bg-gray-200 mb-4"></div>
@@ -31,7 +31,7 @@ const AnalysisOptions = () => {
             className={`text-left text-xs p-2 rounded-lg ${
               active === "Resume Upload Based"
                 ? "bg-indigo-100 text-indigo-600"
-                : "text-gray-600 hover:bg-gray-100"
+                : "text-gray-600 hover:bg-dp"
             }`}
           >
             <i className="inline-block mx-1 text-lg">
@@ -45,13 +45,13 @@ const AnalysisOptions = () => {
               className={`text-left p-2 text-xs rounded-lg ${
                 active === "Select a Role Based"
                   ? "bg-indigo-100 text-indigo-600"
-                  : "text-gray-600 hover:bg-gray-100"
+                  : "text-gray-600 hover:bg-indigo-400"
               }`}
             >
               <i className="inline-block mx-1 text-lg">
                 <CgProfile />
               </i>
-              Select a Role Based
+              Select a Role Based    
             </button>
             {showRoleDropdown && (
               <div className="absolute z-10 mt-2 w-full bg-white rounded-md shadow-lg">
@@ -99,7 +99,7 @@ const AnalysisOptions = () => {
         </div>
       </div>
       <div className="pt-[100px]">
-        <h2 className="text-sm font-bold text-pp mb-2">
+        <h2 className="text-sm font-bold text-dp mb-2">
           Tools to improve score
         </h2>
         <div className="w-full h-px bg-gray-200 mb-4"></div>

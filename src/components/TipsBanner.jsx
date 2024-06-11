@@ -12,7 +12,7 @@ const TipsBanner = () => {
   return (
     <div className="space-y-6 w-[25vw]">
       {/* Important Tips Section */}
-      <div className="p-4 rounded-[25px] border border-pp bg-lp shadow-md">
+      <div className="p-4 rounded-[25px] border-l-[10px]  border-dp/60 bg-lp shadow-md">
         <div className="flex items-start space-x-4">
           <div className="text-yellow-500 text-2xl">
             <i className="fas fa-lightbulb"></i>

@@ -17,6 +17,7 @@ const AnalyzeResume = () => {
           isExpanded ? "ml-[350px]" : "ml-[100px]"
         }`}
       >
+     
         <div className="mb-6 md:mb-8">
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,
