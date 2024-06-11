@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ImStatsBars } from "react-icons/im";
+import { LuGauge } from "react-icons/lu";
 
 const improvements = [
   {
@@ -7,7 +8,7 @@ const improvements = [
     points: "75/100",
     scope: "+5 points scope of improvement",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
+      "Enhances clarity and professionalism by ensuring flawless language usage and grammar accuracy in your resume.",
     details: [
       {
         title: "Verb & Tenses",
@@ -42,123 +43,84 @@ const improvements = [
     ],
   },
   {
-    title: "Language & Grammar",
-    points: "75/100",
+    title: "Formatting & Basic Info",
+    points: "82/100",
     scope: "+5 points scope of improvement",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
+      "Optimizes the layout of your resume, ensuring consistency while highlighting essential personal details.",
     details: [
       {
-        title: "Verb & Tenses",
+        title: "Consistency",
         status: "Unsatisfactory",
         description: "Needs Improvement",
       },
       {
-        title: "Active Voice",
+        title: "Bio Information",
         status: "Excellent",
-        description: "Appropriately Used",
+        description: "No Correction Required",
       },
       {
-        title: "Buzzwords",
-        status: "Moderate",
-        description: "Moderately Needs Improvement",
-      },
-      {
-        title: "Grammar Check",
+        title: "Display of Resume Sections",
         status: "Excellent",
-        description: "Appropriately Used",
+        description: "No Correction Required",
       },
       {
-        title: "Spell Check",
-        status: "Unsatisfactory",
-        description: "Needs Improvement",
-      },
-      {
-        title: "Use of Personal Pronouns",
-        status: "Moderate",
-        description: "Moderately Needs Improvement",
+        title: "Proper Resume Sections Check",
+        status: "Excellent",
+        description: "No Correction Required",
       },
     ],
   },
   {
-    title: "Language & Grammar",
-    points: "75/100",
+    title: "Job Role / Description Based",
+    points: "40/100",
     scope: "+5 points scope of improvement",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
+      "Tailors resume keywords for improved relevance and visibility in job searches based on Job Roles / Description.",
     details: [
       {
-        title: "Verb & Tenses",
+        title: "Keyword Optimization",
         status: "Unsatisfactory",
-        description: "Needs Improvement",
+        description:
+          "Very low amount of keywords found in the resume matching with the job description",
       },
       {
-        title: "Active Voice",
-        status: "Excellent",
-        description: "Appropriately Used",
-      },
-      {
-        title: "Buzzwords",
+        title: "Context Analysis",
         status: "Moderate",
-        description: "Moderately Needs Improvement",
-      },
-      {
-        title: "Grammar Check",
-        status: "Excellent",
-        description: "Appropriately Used",
-      },
-      {
-        title: "Spell Check",
-        status: "Unsatisfactory",
-        description: "Needs Improvement",
-      },
-      {
-        title: "Use of Personal Pronouns",
-        status: "Moderate",
-        description: "Moderately Needs Improvement",
+        description:
+          "Moderate level of contextual similarity found in the resume matching with the job description",
       },
     ],
   },
   {
-    title: "Language & Grammar",
-    points: "75/100",
+    title: "Overall Line Analysis",
+    points: "60/100",
     scope: "+5 points scope of improvement",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Ac semper volutpat in eget. Maecenas ac ipsum laoreet amet ultrices.",
+      "Provides insights on achievements, action language, and skill presentation for a compelling resume.",
     details: [
       {
-        title: "Verb & Tenses",
+        title: "Impact / Achievements",
         status: "Unsatisfactory",
         description: "Needs Improvement",
       },
       {
-        title: "Active Voice",
+        title: "Action Verbs",
         status: "Excellent",
         description: "Appropriately Used",
       },
       {
-        title: "Buzzwords",
+        title: "Responsibilities / Methodology / Tasks",
         status: "Moderate",
         description: "Moderately Needs Improvement",
       },
       {
-        title: "Grammar Check",
+        title: "Overall Skill Analysis",
         status: "Excellent",
         description: "Appropriately Used",
-      },
-      {
-        title: "Spell Check",
-        status: "Unsatisfactory",
-        description: "Needs Improvement",
-      },
-      {
-        title: "Use of Personal Pronouns",
-        status: "Moderate",
-        description: "Moderately Needs Improvement",
       },
     ],
-  }
-  // Repeat the above object for other items...
+  },
 ];
 
 const ImprovementCard = ({ title, points, scope, description, details }) => {
@@ -181,29 +143,51 @@ const ImprovementCard = ({ title, points, scope, description, details }) => {
     }
   };
 
+  const getPointsColor = (points) => {
+    const score = parseInt(points.split("/")[0], 10);
+    if (score < 50) {
+      return "text-red-500";
+    } else if (score < 80) {
+      return "text-yellow-500";
+    } else {
+      return "text-green-500";
+    }
+  };
+
   return (
     <div className="bg-white shadow-md rounded-lg p-4 mb-2 w-full">
-      <div className="flex justify-between items-start">
+      <div className=" justify-between">
         <div>
-          <h3 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
-            <i className="fas text-indigo-600 mr-2">
-              <ImStatsBars />
-            </i>
-            {title}
-          </h3>
-          <p className="text-xs text-green-500 font-bold mb-1">{scope}</p>
-          <p className="text-xs text-gray-600">{description}</p>
-        </div>
-        <div className="text-right">
-          <div className="text-sm font-semibold text-yellow-500 mb-1">
-            {points}
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-gray-800 mb-2 flex items-center">
+              <i className="fas text-indigo-600 mr-2">
+                <ImStatsBars />
+              </i>
+              {title}
+            </h3>
+            <div
+              className={`text-sm flex font-semibold mb-1 ${getPointsColor(
+                points
+              )}`}
+            >
+              <LuGauge className="inline-block mr-1 mt-0 text-lg" />
+              {points}
+            </div>
           </div>
-          <button
-            onClick={toggleDropdown}
-            className="text-indigo-600 text-sm font-semibold"
-          >
-            {isOpen ? "View less ←" : "View Details →"}
-          </button>
+          <p className="text-xs text-green-500 font-bold mb-1 w-full">
+            {scope}
+          </p>
+          <p className="text-xs  text-gray-600">
+            {description}
+            <span>
+              <button
+                onClick={toggleDropdown}
+                className="text-indigo-600 text-xs font-semibold inline-flex "
+              >
+                {isOpen ? "View less ←" : "View Details →"}
+              </button>
+            </span>
+          </p>
         </div>
       </div>
       {isOpen && (

@@ -64,7 +64,7 @@ const ImprovementAnalysis = () => {
           </p>
 
           <div className="mb-6">
-            <div className="mb-4">
+            <div className="mb-4 border-l-4 border-s-dp  ">
               <div className="flex justify-between items-center mb-1">
                 <p className="font-semibold text-sm">Style</p>
               </div>
@@ -72,7 +72,7 @@ const ImprovementAnalysis = () => {
                 <p className="text-xs text-gray-600">
                   Remove vague buzzwords which add little value. Ensure resume
                   screeners can read key sections of your resume.
-                  <span >
+                  <span>
                     {" "}
                     <a href="#fix" className="text-blue-500 text-xs">
                       Fix →
@@ -82,10 +82,9 @@ const ImprovementAnalysis = () => {
               </div>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 border-l-4 border-s-dp ">
               <div className="flex justify-between items-center mb-1">
                 <p className="font-semibold text-sm">Quantify Impact</p>
-              
               </div>
               <p className="text-xs text-gray-600">
                 Increase your impact by using numbers & metrics in your bullet
@@ -99,10 +98,9 @@ const ImprovementAnalysis = () => {
               </p>
             </div>
 
-            <div className="mb-4">
+            <div className="mb-4 border-l-4 border-s-dp ">
               <div className="flex justify-between items-center mb-1">
                 <p className="font-semibold text-sm">Brevity</p>
-           
               </div>
               <p className="text-xs text-gray-600">
                 Your resume's word count is slightly long. Remove unnecessary
