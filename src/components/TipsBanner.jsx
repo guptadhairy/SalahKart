@@ -1,18 +1,11 @@
 import React from "react";
-import {
-  FaDownload,
-  FaBlog,
-  FaEnvelope,
-  FaTwitter,
-  FaLinkedin,
-  FaFacebook,
-} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const TipsBanner = () => {
   return (
-    <div className="space-y-6 w-[25vw]">
+    <div className="space-y-6 ">
       {/* Important Tips Section */}
-      <div className="p-4 rounded-[25px] border-l-[10px]  border-dp/60 bg-lp shadow-md">
+      <div className="p-4 rounded-[25px] border-l-[10px] min-w-[27vw]  border-dp/60 bg-lp shadow-md">
         <div className="flex items-start space-x-4">
           <div className="text-yellow-500 text-2xl">
             <i className="fas fa-lightbulb"></i>
@@ -26,9 +19,9 @@ const TipsBanner = () => {
               specific job, highlighting relevant skills and achievements with
               quantifiable results.
             </p>
-            <a href="#" className="text-blue-500 font-medium hover:underline">
+            <Link href="#" className="text-blue-500 font-medium hover:underline">
               Download Sample Resume
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -49,26 +42,26 @@ const TipsBanner = () => {
             </p>
             <p className="text-gray-700 text-sm">
               Contact At -{" "}
-              <a
+              <Link
                 href="mailto:admin@salahkart.com"
                 className="text-blue-500 font-medium hover:underline"
               >
                 admin@salahkart.com
-              </a>
+              </Link>
             </p>
             <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-blue-500 hover:text-blue-600">
+              <Link to={"/"} className="text-blue-500 hover:text-blue-600">
                 <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="text-blue-500 hover:text-blue-600">
+              </Link>
+              <Link to={"/"} className="text-blue-500 hover:text-blue-600">
                 <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="#" className="text-blue-500 hover:text-blue-600">
+              </Link>
+              <Link to={"/"} className="text-blue-500 hover:text-blue-600">
                 <i className="fab fa-facebook"></i>
-              </a>
-              <a href="#" className="text-blue-500 hover:text-blue-600">
+              </Link>
+              <Link to={"/"} className="text-blue-500 hover:text-blue-600">
                 <i className="fab fa-github"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

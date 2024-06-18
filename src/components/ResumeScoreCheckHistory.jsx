@@ -8,7 +8,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-
+import { FaCalendar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 Chart.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const ResumeScoreCheckHistory = () => {
@@ -50,21 +51,22 @@ const ResumeScoreCheckHistory = () => {
   };
 
   return (
-    <div className="bg-white w-1/2 rounded-[25px] shadow-md p-6">
+    <div className="bg-white min-w-[30vw] h-[360px] rounded-[25px] shadow-md p-6">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-lg font-semibold">Resume Score Check History</h2>
+        <h2 className="text-md font-medium text-slate-400">Analytics History</h2>
         <span className="text-sm text-emerald-500">
           +15 points from last check
         </span>
       </div>
-      <p className="text-sm text-emerald-500 mb-4">Past Six Months</p>
+      <p className="font-semibold">Resume Score Check History</p>
+      <p className="text-sm text-emerald-500 mb-4 flex items-center"><FaCalendar className="mr-1" />Past Six Months</p>
       <div className="h-48">
         <Bar data={data} options={options} />
       </div>
       <div className="text-right mt-4">
-        <a href="#" className="text-blue-500 hover:text-blue-700">
+        <Link to={"/"} className="text-blue-500 hover:text-blue-700">
           View Detailed History →
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -2,10 +2,11 @@ import React from "react";
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { MdOutlineBuild } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Features = () => {
   return (
-    <div className="bg-white p-6 rounded-[25px] shadow-md">
+    <div className="bg-white p-6 rounded-[25px] h-[360px] shadow-md min-w-[30vw]">
       <h2 className="text-lg font-semibold mb-4">Explore Our Other Features</h2>
       <div className="space-y-4">
         <div className="flex items-center space-x-4">
@@ -42,10 +43,10 @@ const Features = () => {
           </div>
         </div>
       </div>
-      <div className="mt-4 text-right">
-        <a href="#" className="text-blue-600 hover:underline">
+      <div className="mt-1 text-right">
+        <Link to={"/"} className="text-blue-600 hover:underline">
           View all →
-        </a>
+        </Link>
       </div>
     </div>
   );

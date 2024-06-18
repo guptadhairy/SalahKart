@@ -8,6 +8,7 @@ import ImprovementAnalysis from "../components/ImprovementAnalysis";
 import Features from "../components/ExploreOtherFeatures";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import TipsBanner from "../components/TipsBanner";  
+
 const CheckScore = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -15,14 +16,10 @@ const CheckScore = () => {
     <div className="flex flex-col lg:flex-row h-screen">
       <SideBar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
       <div
-        className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ${
-          isExpanded ? "ml-[350px]" : "ml-[100px]"
-        }`}
+        className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ml-[90px]`}
       >
         <div
-          className={`mb-6 md:mb-8 transition-all duration-300 ${
-            isExpanded ? "ml-0" : "ml-4"
-          }`}
+          className={`mb-6 md:mb-8 transition-all duration-300`}
         >
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,
@@ -50,9 +47,7 @@ const CheckScore = () => {
           <ImprovementAnalysis />
         </div>
         <div
-          className={`container h-[380px] mt-1 flex gap-3 py-4 transition-all duration-300 ${
-            isExpanded ? "ml-0" : "ml-4"
-          }`}
+          className={`container h-[380px] mt-1 mx-3 flex gap-3 py-4 transition-all duration-300`}
         >
           <ResumeScoreCheckHistory />
           <Features />

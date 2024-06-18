@@ -7,9 +7,7 @@ const LinkedIn = () => {
   return (
     <div className="flex flex-col lg:flex-row h-screen">
       <SideBar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />
-      <div className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ${
-          isExpanded ? "ml-[350px]" : "ml-[100px]"
-        }`}>
+      <div className={`flex-1 bg-slate-200 p-2 md:p-4 lg:py-6 lg:px-6 overflow-y-auto transition-all duration-300 ml-[90px]`}>
            <div className="mb-6 md:mb-8">
           <div className="text-sm text-gray-500 font-semibold mt-4 md:mt-5">
             Hello Dhairya,

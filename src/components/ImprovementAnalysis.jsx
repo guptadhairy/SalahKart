@@ -1,5 +1,5 @@
 import React from "react";
-import { CircularProgress, Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { ImStatsBars } from "react-icons/im";
 
@@ -36,7 +36,6 @@ const SemiCircularGauge = ({ value }) => {
     </svg>
   );
 };
- 
 
 const CircularProgressText = styled(Typography)({
   position: "absolute",
@@ -45,13 +44,12 @@ const CircularProgressText = styled(Typography)({
   transform: "translate(-50%, -50%)",
   fontSize: "1.25rem",
   fontWeight: "bold",
-  
 });
 
 const ImprovementAnalysis = () => {
   return (
-    <div className="p-6 bg-white h-full w-[55vw] rounded-[25px] shadow-md ">
-      <div className="flex items-center justify-between gap-3 mb-4">
+    <div className="p-6 bg-white h-full w-full lg:w-3/4 xl:w-2/3 rounded-[25px] shadow-md mx-auto lg:mx-0">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-4">
         <div>
           <h2 className="text-lg flex gap-1 font-semibold text-gray-400">
             <span className="mt-1 text-pp">
@@ -64,17 +62,17 @@ const ImprovementAnalysis = () => {
           </p>
 
           <div className="mb-6">
-            <div className="mb-4 border-l-4 border-s-dp  ">
+            <div className="mb-4 border-l-4 border-s-dp">
               <div className="flex justify-between items-center mb-1">
-                <p className="font-semibold text-sm">Style</p>
+                <p className="font-semibold text-sm ml-2">Style</p>
               </div>
-              <div className="flex item-start">
-                <p className="text-xs text-gray-600">
+              <div className="flex items-start">
+                <p className="text-xs text-gray-600 ml-2">
                   Remove vague buzzwords which add little value. Ensure resume
                   screeners can read key sections of your resume.
                   <span>
                     {" "}
-                    <a href="#fix" className="text-blue-500 text-xs">
+                    <a href="#fix" className="text-dp font-bold text-xs">
                       Fix →
                     </a>
                   </span>
@@ -82,33 +80,33 @@ const ImprovementAnalysis = () => {
               </div>
             </div>
 
-            <div className="mb-4 border-l-4 border-s-dp ">
+            <div className="mb-4 border-l-4 border-s-dp">
               <div className="flex justify-between items-center mb-1">
-                <p className="font-semibold text-sm">Quantify Impact</p>
+                <p className="font-semibold text-sm ml-2">Quantify Impact</p>
               </div>
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-600 ml-2">
                 Increase your impact by using numbers & metrics in your bullet
                 points. Swap weak language with strong action verbs.
                 <span>
                   {" "}
-                  <a href="#fix" className="text-blue-500 text-xs">
+                  <a href="#fix" className="text-dp font-bold text-xs">
                     Fix →
                   </a>
                 </span>
               </p>
             </div>
 
-            <div className="mb-4 border-l-4 border-s-dp ">
+            <div className="mb-4 border-l-4 border-s-dp">
               <div className="flex justify-between items-center mb-1">
-                <p className="font-semibold text-sm">Brevity</p>
+                <p className="font-semibold text-sm ml-2">Brevity</p>
               </div>
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-600 ml-2">
                 Your resume's word count is slightly long. Remove unnecessary
                 sections, older, less relevant information. Use few bullet
                 points.
                 <span>
                   {" "}
-                  <a href="#fix" className="text-blue-500 text-xs">
+                  <a href="#fix" className="text-dp font-bold text-xs">
                     Fix →
                   </a>
                 </span>
@@ -123,7 +121,7 @@ const ImprovementAnalysis = () => {
             <CircularProgressText component="div">80%</CircularProgressText>
           </div>
           <div className="text-left">
-            <a href="#improvements" className="text-blue-500 text-sm">
+            <a href="#improvements" className="text-dp font-semibold text-xs">
               View All Improvements →
             </a>
           </div>

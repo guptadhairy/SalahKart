@@ -5,18 +5,19 @@ import score from "../assets/score.png";
 import chart from "../assets/Chart.png";
 import icon from "../assets/Icon.png";
 import chart2 from "../assets/Chart2.png";
+import { Link } from "react-router-dom";
 
 const Frame1CheckScore = () => {
   return (
     <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
       {/* Card 1 */}
-      <div className="bg-white rounded-[25px] flex items-center p-4">
+      <div className="bg-white rounded-[25px] flex justify-center items-center h-[115px]">
         <img src={g} alt="label" className="w-16 h-22 mr-4" />
         <div className="flex flex-col">
           <div className="text-lg font-medium">Check Score</div>
-          <a href="/ResumeUpload" className="text-blue-500">
-            Click here to check your score
-          </a>
+          <Link to={"/resumeupload"} className="text-blue-500">
+            Re-Upload Resume
+          </Link>
         </div>
         <div className="ml-5">
           <img src={graph} alt="graph" className="w-20 h-22" />
