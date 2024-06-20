@@ -51,7 +51,7 @@ const ResumeScoreCheckHistory = () => {
   };
 
   return (
-    <div className="bg-white min-w-[30vw] h-[360px] rounded-[25px] shadow-md p-6">
+    <div className="bg-white rounded-[25px] shadow-md p-6">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-md font-medium text-slate-400">Analytics History</h2>
         <span className="text-sm text-emerald-500">

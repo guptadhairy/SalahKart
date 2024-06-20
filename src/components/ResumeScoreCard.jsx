@@ -39,14 +39,14 @@ const SemiCircularGauge = ({ value }) => {
 
 const ResumeScoreCard = () => {
   return (
-    <div className="w-[30vw]  p-6 bg-white rounded-[25px] shadow-md">
-      <h2 className="text-lg flex gap-1 font-semibold text-gray-400">
+    <div className="w-[90vw] sm:w-[70vw] h-[370px] lg:w-[30vw] p-4 sm:p-6 bg-white rounded-[25px] shadow-md overflow-hidden">
+      <h2 className="text-base sm:text-lg flex gap-1 font-semibold text-gray-400">
         <span className="mt-1 text-pp">
           <ImStatsBars />
         </span>
         Error Analysis
       </h2>
-      <div className="mb-4 text-bold text-sm ">
+      <div className="mb-4 text-sm sm:text-base font-bold">
         We want to make you a great Resume Score
       </div>
       <Box className="relative flex items-center justify-center mb-4">
@@ -61,30 +61,30 @@ const ResumeScoreCard = () => {
         </div>
       </Box>
 
-      <div className="text-xs w-full flex justify-center ">
+      <div className="text-xs sm:text-sm w-full flex justify-center">
         Go through our analysis to see what you can fix
       </div>
-      <div className=" w-full flex flex-col h-[95px] mt-2 justify-center items-center ">
+      <div className="w-full flex flex-col h-[95px] mt-2 justify-center items-center">
         <div className="w-[100px]">
-        <div className="flex items-center justify-start text-red-500">
-          <ErrorOutline className="mr-2" />
-          <span className="text-xs"> Completeness</span>
-        </div>
-        <div className="flex items-center justify-start text-red-500">
-          <ErrorOutline className="mr-2" />
-          <span className="text-xs">Formatting</span>
-        </div>
-        <div className="flex items-center justify-start text-red-500">
-          <ErrorOutline className="mr-2" />
-          <span className="text-xs">Typos</span>
-        </div>
-        <div className="flex items-center justify-end text-slate-500">
-          <span className="text-xs">+3 More</span>
-        </div>  
+          <div className="flex items-center justify-start text-red-500">
+            <ErrorOutline className="mr-2" />
+            <span className="text-xs sm:text-sm">Completeness</span>
+          </div>
+          <div className="flex items-center justify-start text-red-500">
+            <ErrorOutline className="mr-2" />
+            <span className="text-xs sm:text-sm">Formatting</span>
+          </div>
+          <div className="flex items-center justify-start text-red-500">
+            <ErrorOutline className="mr-2" />
+            <span className="text-xs sm:text-sm">Typos</span>
+          </div>
+          <div className="flex items-center justify-end text-slate-500">
+            <span className="text-xs sm:text-sm">+3 More</span>
+          </div>
         </div>
       </div>
-      <div className="flex items-center flex-col pb-4 mt-3">
-        <button className="w-[50%] text-sm py-2 px-4  bg-dp text-white rounded-2xl hover:bg-pp focus:outline-none">
+      <div className="flex items-center flex-col mt-3">
+        <button className="w-[70%] sm:w-[50%] text-xs sm:text-sm py-2 px-4 bg-dp text-white rounded-2xl hover:bg-pp focus:outline-none">
           Fix My Resume
         </button>
       </div>

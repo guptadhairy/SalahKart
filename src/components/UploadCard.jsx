@@ -19,21 +19,20 @@ const ResumeUpload = () => {
   };
 
   return (
-    <div className=" pt-[6%] w-full flex flex-wrap justify-center">
-      <div className="bg-white p-6 rounded-[25px] shadow-md w-[1000px] grid grid-cols-2 gap-4">
-        <div className="">
-          <h3 className="text-xl text-center font-bold mb-4">
+    <div className="pt-6 sm:pt-12 w-full flex justify-center">
+      <div className="bg-white p-6 sm:p-8 rounded-xl shadow-md max-w-screen-lg w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h3 className="text-xl sm:text-2xl font-bold text-center md:text-left mb-4">
             Upload Your
             <span className="text-pp"> Resume </span>
           </h3>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:items-start ">
             <label
               htmlFor="resume-upload"
-              className="file-upload-label flex flex-col items-center justify-center  w-full
-              h-[350px] border-2 border-dashed rounded-lg cursor-pointer bg-[#f5f0ff] hover:bg-gray-200"
+              className="file-upload-label flex flex-col items-center justify-center w-full h-[350px] md:h-auto border-2 border-dashed rounded-lg cursor-pointer bg-[#f5f0ff] hover:bg-gray-200"
             >
-              <div className="flex flex-col items-center justify-center pt-5 pb-6  ">
-                <i className="">
+              <div className="flex flex-col items-center justify-center pt-5 pb-6 h-[340px]">
+                <i>
                   <img src={uploadlogo} alt="upload" />
                 </i>
                 <span className="text-gray-500 font-light">
@@ -55,24 +54,25 @@ const ResumeUpload = () => {
           </div>
         </div>
         <div>
-          <div className="flex flex-row  gap-4 w-full">
-            <h3 className="text-xl text-center font-bold ">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 w-full">
+            <h3 className="text-xl sm:text-2xl font-bold text-center md:text-left">
               Additional Details
             </h3>
-
-            <button className=" text-pp text-end font-bold">Skip This</button>
+            <button className="text-pp text-center md:text-right font-bold">
+              Skip This
+            </button>
           </div>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label
                 htmlFor="job-role"
-                className="block text-center text-gray-700 text-sm font-bold mb-2 w-full"
+                className="block text-center md:text-left text-gray-700 text-sm font-bold mb-2"
               >
                 Job Role
               </label>
               <select
                 id="job-role"
-                className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-[450px]"
+                className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full"
               >
                 {/* Add job role options here */}
               </select>
@@ -80,19 +80,20 @@ const ResumeUpload = () => {
             <div>
               <label
                 htmlFor="career-level"
-                className="block text-center text-gray-700 text-sm font-bold mb-2 w-full"
+                className="block text-center md:text-left text-gray-700 text-sm font-bold mb-2"
               >
                 Career Level
               </label>
               <select
                 id="career-level"
-                className="shadow appearance-none border rounded w-[450px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               >
                 {/* Add career level options here */}
               </select>
             </div>
-
-            <div className="w-full text-center text-gray-600 mb-4">OR</div>
+            <div className="w-full text-center md:text-left text-gray-600 mb-4">
+              OR
+            </div>
             <div>
               <label
                 htmlFor="job-description"
@@ -107,14 +108,14 @@ const ResumeUpload = () => {
                 placeholder="Enter the Job Description Manually"
               ></textarea>
             </div>
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-violet-500 to-fuchsia-500 w-full text-white font-bold text-center py-2 px-4 rounded-lg"
+            >
+              UPLOAD RESUME
+            </button>
           </form>
         </div>
-        <button
-          type="submit"
-          className="bg-gradient-to-r from-violet-500 to-fuchsia-500  w-[950px] text-white font-bold text-center py-2 px-4 rounded-lg"
-        >
-          UPLOAD RESUME
-        </button>
       </div>
     </div>
   );

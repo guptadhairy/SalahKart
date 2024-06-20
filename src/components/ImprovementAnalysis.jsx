@@ -48,23 +48,23 @@ const CircularProgressText = styled(Typography)({
 
 const ImprovementAnalysis = () => {
   return (
-    <div className="p-6 bg-white h-full w-full lg:w-3/4 xl:w-2/3 rounded-[25px] shadow-md mx-auto lg:mx-0">
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-4">
+    <div className="p-4 sm:p-6 md:p-8 bg-white  rounded-[25px] shadow-md mx-auto overflow-hidden h-full lg:h-[370px]">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-6 mb-4">
         <div>
-          <h2 className="text-lg flex gap-1 font-semibold text-gray-400">
+          <h2 className="text-base sm:text-lg flex gap-1 font-semibold text-gray-400">
             <span className="mt-1 text-pp">
               <ImStatsBars />
             </span>
             Improvement Analysis
           </h2>
-          <p className="text-lg font-bold mb-3">
+          <p className="text-sm sm:text-base font-bold mb-3">
             Your Resume Scored 70 out of 100.
           </p>
 
           <div className="mb-6">
             <div className="mb-4 border-l-4 border-s-dp">
               <div className="flex justify-between items-center mb-1">
-                <p className="font-semibold text-sm ml-2">Style</p>
+                <p className="font-semibold text-xs sm:text-sm ml-2">Style</p>
               </div>
               <div className="flex items-start">
                 <p className="text-xs text-gray-600 ml-2">
@@ -82,7 +82,9 @@ const ImprovementAnalysis = () => {
 
             <div className="mb-4 border-l-4 border-s-dp">
               <div className="flex justify-between items-center mb-1">
-                <p className="font-semibold text-sm ml-2">Quantify Impact</p>
+                <p className="font-semibold text-xs sm:text-sm ml-2">
+                  Quantify Impact
+                </p>
               </div>
               <p className="text-xs text-gray-600 ml-2">
                 Increase your impact by using numbers & metrics in your bullet
@@ -98,7 +100,7 @@ const ImprovementAnalysis = () => {
 
             <div className="mb-4 border-l-4 border-s-dp">
               <div className="flex justify-between items-center mb-1">
-                <p className="font-semibold text-sm ml-2">Brevity</p>
+                <p className="font-semibold text-xs sm:text-sm ml-2">Brevity</p>
               </div>
               <p className="text-xs text-gray-600 ml-2">
                 Your resume's word count is slightly long. Remove unnecessary
